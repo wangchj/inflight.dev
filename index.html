@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inflight - Delightful REST API Client</title>
+    <link rel="icon" href="send.svg">
     <link href="./bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -24,6 +25,38 @@
 
       .block-text {
         line-height: 1.7em;
+      }
+
+      .footer {
+        background-color: rgb(248, 249, 250);
+        width: 100%;
+        margin-top: 2rem;
+        padding-block: 3rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer-content {
+        /* background-color: black; */
+        width: 100%;
+        max-width: 1300px;
+        padding-inline: 1rem;
+        opacity: 80%;
+      }
+
+      .footer-logo {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .footer a {
+        color: rgb(33, 37, 41);
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        color: rgb(33, 37, 41);
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -217,6 +250,51 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-content">
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          "
+        >
+          <div
+            style=
+            "
+              display: flex;
+              flex-direction: column;
+              gap: 0.5em;
+            "
+          >
+            <div class="footer-logo">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-send"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 14l11 -11" />
+                <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+              </svg>
+
+              Inflight
+            </div>
+            <div style="font-size: 0.9em; opacity: 80%;">Copyright © 2025 Inflight Team</div>
+          </div>
+
+          <div style="display: flex; flex-direction: row; gap:2em">
+            <div><a href="privacy.html">Privacy</a></div>
+            <div><a href="terms_of_service.html">Terms of Service</a></div>
           </div>
         </div>
       </div>
