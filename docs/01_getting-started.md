@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started
 
 Welcome to Inflight! Inflight is a REST API client desktop application that is designed to simplify the process of designing and testing APIs that run on the web. This document describe how to install Inflight and get started with using the application.
 
