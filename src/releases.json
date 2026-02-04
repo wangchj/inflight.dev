@@ -1,0 +1,99 @@
+[
+  {
+    "version": "2.1.0",
+    "platforms": {
+      "darwin": [
+        {
+          "arch": "arm64",
+          "package": "Inflight-darwin-arm64-2.1.0.zip",
+          "sha256": "5a8b2c1e96eef3e401b338160e7ea99ef876ed9a822b2a305a825f2d6f69eff1"
+        },
+        {
+          "arch": "x64",
+          "package": "Inflight-darwin-x64-2.1.0.zip",
+          "sha256": "77d77e5da11ece8ce4277a790b2641502b4628f0148d5831d18ec50dfd17e1f2"
+        }
+      ],
+      "win32": [
+        {
+          "arch": "arm64",
+          "package": "Inflight-win32-arm64-2.1.0.zip",
+          "sha256": "f4369cdbef357304c54f07b2d0ba434313458af6537d56b2ae119c9d63464fef"
+        },
+        {
+          "arch": "x64",
+          "package": "Inflight-win32-x64-2.1.0.zip",
+          "sha256": "7960862f35f7807e878b350b83463513872f6bc9b49496529938822a2d6c27cc"
+        }
+      ]
+    }
+  },
+  {
+    "version": "2.0.0",
+    "platforms": {
+      "darwin": [
+        {
+          "arch": "arm64",
+          "package": "Inflight-darwin-arm64-2.0.0.zip",
+          "sha256": "e560853fb4871aed4c8349e1a92f421249cb3ee9212f5618cf830bd03d7ac890"
+        },
+        {
+          "arch": "x64",
+          "package": "Inflight-darwin-x64-2.0.0.zip",
+          "sha256": "5e3b5c533e05fa6d8099fc6be89cec16375178e0191240347b9ccf5448f635ab"
+        }
+      ]
+    }
+  },
+  {
+    "version": "1.7.1",
+    "platforms": {
+      "darwin": [
+        {
+          "arch": "arm64",
+          "package": "Inflight-darwin-arm64-1.7.1.zip",
+          "sha256": "09ceaa8cbb8b85ef238552d3a1c65704d5dc25a880e587d57ecd4402c48eb7b2"
+        },
+        {
+          "arch": "x64",
+          "package": "Inflight-darwin-x64-1.7.1.zip",
+          "sha256": "8fcbe6fbbe213fbe2a26862fcd5a0d4e679c269cfed2673eef2404ef09a3a17b"
+        }
+      ]
+    }
+  },
+  {
+    "version": "1.6.0",
+    "platforms": {
+      "darwin": [
+        {
+          "arch": "arm64",
+          "package": "Inflight-darwin-arm64-1.6.0.zip",
+          "sha256": "7364dd15cc6840a6e1cefe790977ac3c8db8ebd37668cb177909ea4694876070"
+        },
+        {
+          "arch": "x64",
+          "package": "Inflight-darwin-x64-1.6.0.zip",
+          "sha256": "a856d9ef483b0736711a0b809bca55a3f87455ccde494fb84f701988462db79c"
+        }
+      ]
+    }
+  },
+  {
+    "version": "1.5.1",
+    "platforms": {
+      "darwin": [
+        {
+          "arch": "arm64",
+          "package": "Inflight-darwin-arm64-1.5.1.zip",
+          "sha256": "d48f28adbf3b4fb13c2a372fbbb0b21bf8ef89900ebd13f8831067d801ce7118"
+        },
+        {
+          "arch": "x64",
+          "package": "Inflight-darwin-x64-1.5.1.zip",
+          "sha256": "c89aceeac9a727a5dd9bfdeb925edc8769ce00777e96a6b215c1b3bfb38dc2f0"
+        }
+      ]
+    }
+  }
+]

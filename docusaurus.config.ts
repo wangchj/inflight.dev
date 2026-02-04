@@ -84,6 +84,11 @@ const config: Config = {
           label: 'Docs',
         },
         {
+          to: 'downloads',
+          position: 'right',
+          label: 'Downloads',
+        },
+        {
           href: 'https://github.com/wangchj/inflight',
           label: 'GitHub',
           position: 'right',
