@@ -81,8 +81,8 @@ function Builds({version, platform, builds}: {version: string, platform: string,
       <tbody>
         {builds.map(build => (
           <tr>
-            <td>{buildNameMap.get(platform)?.get(build.arch) ?? 'Unknown build'}</td>
-            <td><a href={`https://inflight.dev/releases/${version}/${build.package}`}>{build.package}</a></td>
+            <td>{getBuildName(platform,build.arch)}</td>
+            <td><a href={getBuildUrl(version, build)}>{build.package}</a></td>
             <td style={{overflowWrap: 'anywhere'}}><small><code>{build.sha256}</code></small></td>
           </tr>
         ))
@@ -101,4 +101,24 @@ function Builds({version, platform, builds}: {version: string, platform: string,
  */
 export function sortPlatforms(a, b) {
   return a[0] === b[0] ? 0 : a[0] > b[0] ? 1 : -1;
+}
+
+/**
+ * Gets build package download URL.
+ *
+ * @param version The release version
+ * @param build The build data model object that contains package file name.
+ */
+export function getBuildUrl(version: string, build: any) {
+  return `https://inflight.dev/releases/${version}/${build.package}`;
+}
+
+/**
+ * Gets the user friendly name of the build.
+ *
+ * @param platform The internal platform name, e.g., darwin or win32.
+ * @param arch The CPU architecture name, e.g., arm64 or x64.
+ */
+export function getBuildName(platform: string, arch: string) {
+  return buildNameMap.get(platform)?.get(arch) ?? 'Unknown build';
 }

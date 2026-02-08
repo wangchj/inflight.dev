@@ -1,7 +1,25 @@
 import Head from "@docusaurus/Head"
-import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Layout from '@theme/Layout';
+import { getBuildName, getBuildUrl } from "@site/src/components/downloads/releases";
+import releases from '@site/src/releases.json';
+import { UAParser } from 'ua-parser-js';
 import styles from './index.module.css';
+
+/**
+ * User agent parser instance.
+ */
+const uaParser = new UAParser();
+
+/**
+ * The latest release data
+ */
+const latestRelease = releases[0];
+
+/**
+ * The latest release version.
+ */
+const latestVersion = latestRelease.version;
 
 export default function Index() {
   return (
@@ -27,17 +45,10 @@ export default function Index() {
 
           {/* Download Buttons */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1em', alignItems: 'center', marginBottom: '2.8rem' }}>
-            <div><strong>Download the desktop app (v2.1.0)</strong></div>
-            <div style={{ display: 'flex', textAlign: 'center', columnGap: '0.5rem'}}>
-              <a role="button" className="button button--secondary" href="https://inflight.dev/releases/2.1.0/Inflight-darwin-arm64-2.1.0.zip">
-                Mac Apple Silicon
-              </a>
-              <a role="button" className="button button--secondary" href="https://inflight.dev/releases/2.1.0/Inflight-darwin-x64-2.1.0.zip">
-                Mac Intel Chip
-              </a>
-            </div>
+            <div><strong>Download the desktop app ({`v${latestVersion}`})</strong></div>
+            <PlatformSpecificDownload/>
             <div style={{ textAlign: 'center', fontSize: '0.95em' }}>
-              or <a href="https://app.inflight.dev" target="_blank" style={{ textDecoration: 'none' }}>use the Web App</a>
+              See <a href="downloads">all versions</a> or use the <a href="https://app.inflight.dev" target="_blank">Web App</a>
             </div>
           </div>
 
@@ -95,10 +106,31 @@ function FeatureBlock({ title, text, icon }) {
   );
 }
 
-function LogoIcon() {
+/**
+ * The UI component that render platform specific download buttons.
+ */
+function PlatformSpecificDownload() {
+  /**
+   * The user OS data.
+   */
+  const os = uaParser.getOS();
+
+  /**
+   * Detected user platform.
+   */
+  const platform = os.is('macOs') ? 'darwin' : os.is('Windows') ? 'win32' : null;
+
+  if (!platform) {
+    return false;
+  }
+
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}>
-      <path d="M10 14l11 -11" /><path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
-    </svg>
-  );
+    <div style={{ display: 'flex', textAlign: 'center', columnGap: '0.5rem'}}>
+      {latestRelease.platforms[platform].map(build => (
+        <a role="button" className="button button--secondary" href={getBuildUrl(latestVersion, build)}>
+          {getBuildName(platform, build.arch)}
+        </a>
+      ))}
+    </div>
+  )
 }
