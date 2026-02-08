@@ -75,7 +75,7 @@ function Builds({version, platform, builds}: {version: string, platform: string,
         <tr>
           <th style={{width: '25%'}}>Platform</th>
           <th style={{width: '40%'}}>Package</th>
-          <th style={{width: '35%'}}>SHA-265 Checksum</th>
+          <th style={{width: '35%'}}>SHA-256 Checksum</th>
         </tr>
       </thead>
       <tbody>
