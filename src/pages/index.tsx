@@ -1,6 +1,5 @@
 import Head from "@docusaurus/Head"
 import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './index.module.css';
 
