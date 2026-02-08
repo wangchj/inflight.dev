@@ -28,12 +28,12 @@ export default function Index() {
 
           {/* Download Buttons */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1em', alignItems: 'center', marginBottom: '2.8rem' }}>
-            <div><strong>Download the desktop app (v2.0.0)</strong></div>
+            <div><strong>Download the desktop app (v2.1.0)</strong></div>
             <div style={{ display: 'flex', textAlign: 'center', columnGap: '0.5rem'}}>
-              <a role="button" className="button button--secondary" href="https://inflight.dev/releases/2.0.0/Inflight-darwin-arm64-2.0.0.zip">
+              <a role="button" className="button button--secondary" href="https://inflight.dev/releases/2.1.0/Inflight-darwin-arm64-2.1.0.zip">
                 Mac Apple Silicon
               </a>
-              <a role="button" className="button button--secondary" href="https://inflight.dev/releases/2.0.0/Inflight-darwin-x64-2.0.0.zip">
+              <a role="button" className="button button--secondary" href="https://inflight.dev/releases/2.1.0/Inflight-darwin-x64-2.1.0.zip">
                 Mac Intel Chip
               </a>
             </div>
