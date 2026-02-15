@@ -1,5 +1,34 @@
 [
   {
+    "version": "2.2.0",
+    "platforms": {
+      "darwin": [
+        {
+          "arch": "arm64",
+          "package": "Inflight-darwin-arm64-2.2.0.zip",
+          "sha256": "37512b88239af0cd0256496971eed8050476cc7f8d2d6cec28314ee956482975"
+        },
+        {
+          "arch": "x64",
+          "package": "Inflight-darwin-x64-2.2.0.zip",
+          "sha256": "348c3f127cbf7445cfe87b83c226db3cc2e8f562ee3c4d87ab2a260fe0b4a62f"
+        }
+      ],
+      "win32": [
+        {
+          "arch": "arm64",
+          "package": "Inflight-win32-arm64-2.2.0.zip",
+          "sha256": "85be079e681ad77b8d244f32f325260deeef0c376378a8733680398618964a30"
+        },
+        {
+          "arch": "x64",
+          "package": "Inflight-win32-x64-2.2.0.zip",
+          "sha256": "545708a4993fba28354ccf1a4b26bdead8b87220eb7f96690e720958ec30302a"
+        }
+      ]
+    }
+  },
+  {
     "version": "2.1.0",
     "platforms": {
       "darwin": [
