@@ -1,8 +1,10 @@
 import Head from "@docusaurus/Head"
+import { useColorMode } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import { getBuildName, getBuildUrl } from "@site/src/components/downloads/releases";
 import releases from '@site/src/releases.json';
+import { useEffect, useState } from 'react';
 import { UAParser } from 'ua-parser-js';
 import styles from './index.module.css';
 
@@ -52,14 +54,7 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Screenshot */}
-          <div style={{ width: '100%', paddingInline: '1rem', maxWidth: '1312px' }}>
-            <img
-              src={useBaseUrl('/screen.png')}
-              style={{ border: '1px solid #ced4da', borderRadius: '10px', width: '100%' }}
-              alt="App Screenshot"
-            />
-          </div>
+          <Screenshot/>
 
           {/* Features Grid */}
           <div className={styles.featureGrid}>
@@ -90,6 +85,41 @@ export default function Index() {
   )
 }
 
+/**
+ * The screenshot component.
+ */
+function Screenshot() {
+  /**
+   * The screenshot file.
+   */
+  const [screenshot, setScreenshot] = useState('screen-light.png');
+
+  /**
+   * The color mode either light or dark.
+   */
+  const { colorMode } = useColorMode();
+
+  /**
+   * Updates the screenshot based on light or dark mode.
+   */
+  useEffect(() => {
+    setScreenshot(colorMode === 'dark' ? 'screen-dark.png' : 'screen-light.png');
+  }, [colorMode]);
+
+  return (
+    <div style={{ width: '100%', paddingInline: '1rem', maxWidth: '1312px' }}>
+      <img
+        src={useBaseUrl(`/${screenshot}`)}
+        style={{ width: '100%', borderRadius: '10px', boxShadow: '0 0 3px rgba(0, 0, 0, 0.2)' }}
+        alt="App Screenshot"
+      />
+    </div>
+  )
+}
+
+/**
+ * Feature block component
+ */
 function FeatureBlock({ title, text, icon }) {
   return (
     <div className={`col col-12 col-md-6 ${styles.block}`}>
